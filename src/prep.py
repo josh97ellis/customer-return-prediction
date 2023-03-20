@@ -176,6 +176,12 @@ class DataPrep:
         )
         return data
     
+    def map_colors_(self, df):
+        color_map = pd.read_csv('./data/color_mapping.csv')
+        color_map = color_map.set_index('color_key').to_dict()['color_category']
+        data = df.replace({"color": color_map})
+        return data
+    
     def run(self, df):
         data_prep = (
             df
@@ -193,6 +199,7 @@ class DataPrep:
             .pipe(self.get_customer_return_behavior_)
             .pipe(self.get_item_return_behavior_)
             .pipe(self.get_manufacturer_return_behavior_)
+            .pipe(self.map_colors_)
         )
         
         data_prep = data_prep.drop(

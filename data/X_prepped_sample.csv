@@ -1,0 +1,51 @@
+,size,color,price,salutation,state,customer_age_at_order,account_age_months,order_month,is_delivered,customer_return_behavior,item_return_behavior,manufacturer_return_behavior
+0,39,pink,79.9,Mrs,Hesse,,0.0,September,1,low,moderately low,moderately high
+1,8,blue,89.9,Mrs,Berlin,61.0,18.0,September,1,moderately low,high,moderately high
+2,38,grey,39.9,Mrs,Lower Saxony,42.0,0.0,September,1,moderately low,moderately high,moderately high
+3,42,brown,139.9,Mrs,North Rhine-Westphalia,40.0,18.0,September,1,moderately high,moderately low,moderately high
+4,45,brown,54.95,Mr,Lower Saxony,53.0,0.0,September,1,low,low,moderately low
+5,38,blue,24.9,Mrs,Berlin,58.0,6.0,September,1,low,moderately low,moderately high
+6,38,blue,24.9,Mrs,Bavaria,42.0,18.0,September,0,moderately low,moderately low,moderately high
+7,40,blue,79.9,Mrs,Schleswig-Holstein,43.0,18.0,September,1,moderately high,moderately high,moderately high
+8,41,blue,79.9,Mrs,Hesse,41.0,18.0,September,0,low,moderately high,moderately high
+9,8,green,24.9,Mrs,Saxony,,0.0,September,1,low,high,moderately high
+10,38,pink,39.9,Mrs,Baden-Wuerttemberg,54.0,2.0,September,1,low,low,moderately low
+11,38,purple,59.9,Mrs,Baden-Wuerttemberg,54.0,2.0,September,0,low,low,moderately low
+12,42,other,59.9,Mrs,Hesse,52.0,0.0,September,1,low,moderately low,moderately high
+13,40,black,89.9,Mrs,Berlin,46.0,1.0,September,1,moderately high,high,moderately high
+14,38,blue,49.9,Mrs,Baden-Wuerttemberg,54.0,3.0,September,1,moderately low,moderately high,moderately high
+15,41,brown,79.9,Mrs,Baden-Wuerttemberg,37.0,18.0,September,1,low,moderately high,moderately high
+16,46,blue,32.95,Mrs,Lower Saxony,35.0,0.0,September,0,low,moderately high,moderately low
+17,38,grey,24.9,Mrs,Lower Saxony,59.0,2.0,September,0,low,moderately low,moderately low
+18,38,beige,12.9,Mrs,Berlin,58.0,6.0,September,1,low,low,moderately low
+19,38,black,19.9,Mrs,North Rhine-Westphalia,49.0,17.0,September,1,high,moderately low,moderately low
+20,8,red,49.95,Mrs,Hamburg,55.0,0.0,September,1,high,moderately high,moderately high
+21,8,black,49.95,Mrs,Hamburg,55.0,0.0,September,1,high,moderately high,moderately high
+22,39,black,99.9,Mrs,Hesse,,0.0,September,1,low,moderately low,moderately high
+23,42,black,59.9,Family,Bavaria,37.0,7.0,September,1,high,moderately low,moderately high
+24,38,red,29.9,Mrs,Baden-Wuerttemberg,54.0,2.0,September,1,low,moderately low,moderately low
+25,39,orange,49.9,Mrs,Bavaria,37.0,6.0,September,1,low,moderately high,moderately high
+26,39,blue,49.9,Mrs,Hesse,,0.0,September,1,low,moderately high,moderately high
+27,39,blue,69.9,Mrs,Brandenburg,45.0,18.0,September,1,moderately low,moderately low,moderately high
+28,42,blue,69.9,Mr,Lower Saxony,57.0,11.0,September,1,moderately high,moderately low,moderately high
+29,37,brown,69.9,Mrs,Bavaria,,18.0,September,1,high,moderately low,moderately high
+30,42,blue,69.9,Mrs,Baden-Wuerttemberg,43.0,0.0,September,1,moderately high,moderately low,moderately high
+31,39,brown,69.9,Mrs,Bavaria,22.0,0.0,September,0,low,moderately low,moderately high
+32,42,brown,69.9,Mrs,Bavaria,22.0,0.0,September,0,low,moderately low,moderately high
+33,40,red,69.9,Mrs,Lower Saxony,45.0,0.0,September,1,moderately high,moderately high,moderately high
+34,41,purple,69.9,Mrs,Hesse,41.0,18.0,September,0,low,moderately high,moderately high
+35,43,red,69.9,Mrs,North Rhine-Westphalia,31.0,0.0,September,1,moderately high,moderately high,moderately high
+36,39,black,59.9,Mrs,Mecklenburg-Western Pomerania,44.0,0.0,September,1,moderately high,moderately high,moderately high
+37,40,black,89.9,Mrs,Hamburg,42.0,18.0,September,1,moderately low,moderately high,moderately high
+38,44,black,59.9,Mrs,Saxony,27.0,0.0,September,1,moderately high,moderately high,moderately high
+39,30,grey,24.9,Mrs,Hesse,36.0,0.0,September,1,high,moderately high,moderately low
+40,38,beige,15.9,Mrs,Bavaria,42.0,10.0,September,1,low,moderately low,moderately low
+41,39,orange,79.9,Mrs,Bavaria,,0.0,September,1,high,moderately low,moderately high
+42,38,red,29.9,Mrs,Lower Saxony,40.0,0.0,September,1,moderately high,moderately low,moderately low
+43,21,black,69.9,Mrs,Berlin,,3.0,September,1,high,moderately high,moderately low
+44,44,black,69.9,Mrs,North Rhine-Westphalia,57.0,18.0,September,0,low,moderately high,moderately low
+45,24,black,69.9,Mrs,Baden-Wuerttemberg,60.0,18.0,September,1,moderately high,moderately high,moderately low
+46,38,red,49.9,Mrs,Lower Saxony,54.0,0.0,September,1,high,moderately high,moderately high
+47,38,brown,49.9,Mrs,Rhineland-Palatinate,60.0,1.0,September,1,moderately low,moderately high,moderately low
+48,37,grey,79.9,Mrs,Berlin,,3.0,September,1,high,moderately high,moderately high
+49,44,other,29.9,Mrs,Saarland,52.0,4.0,September,1,moderately low,moderately low,moderately high
