@@ -1,6 +1,6 @@
 from sklearn.model_selection import cross_validate
 import pandas as pd
-from prep import DataPrep
+from .prep import DataPrep
 
 
 def model_evaluation_cv(estimator, X, y, cv=5, scoring='accuracy', return_train_score=False):

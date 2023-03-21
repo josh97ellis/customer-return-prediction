@@ -177,6 +177,7 @@ class DataPrep:
         return data
     
     def map_colors_(self, df):
+        data = deepcopy(df)
         color_map = pd.read_csv('./data/color_mapping.csv')
         color_map = color_map.set_index('color_key').to_dict()['color_category']
         data = df.replace({"color": color_map})
