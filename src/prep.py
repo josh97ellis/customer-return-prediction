@@ -148,10 +148,11 @@ class DataPrep:
         data = deepcopy(df)
         customer_returns = pd.read_csv('./data/customer_return_history.csv', dtype='O')
         data = data.merge(
-            customer_returns[['customerID', 'customer_return_behavior']],
+            customer_returns[['customerID', 'customer_return_behavior', 'total_orders']],
             on='customerID',
             how='left'
         )
+        data['total_orders'] = pd.to_numeric(data['total_orders'], errors='coerce')
         return data
 
 
@@ -199,7 +200,7 @@ class DataPrep:
             .pipe(self.map_size_categories_)
             .pipe(self.get_customer_return_behavior_)
             .pipe(self.get_item_return_behavior_)
-            .pipe(self.get_manufacturer_return_behavior_)
+            #.pipe(self.get_manufacturer_return_behavior_)
             .pipe(self.map_colors_)
         )
         
@@ -210,7 +211,7 @@ class DataPrep:
                 'creationDate',
                 'dateOfBirth',
                 'itemID',
-                'manufacturerID',
+                #'manufacturerID',
                 'customerID'
             ])
         
