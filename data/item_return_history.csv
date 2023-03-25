@@ -1,4 +1,4 @@
-itemID,total_returns,total_orders,return_rate,item_return_behavior
+itemID,total_returns,total_orders,item_return_rate,item_return_behavior
 1,32,74,0.43243243243243246,moderately low
 2,8,16,0.5,moderately high
 3,0,5,0.0,low

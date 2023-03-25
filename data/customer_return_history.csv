@@ -1,4 +1,4 @@
-customerID,total_returns,total_orders,return_rate,customer_return_behavior
+customerID,total_returns,customer_order_count,customer_return_rate,customer_return_behavior
 6,9,21,0.42857142857142855,moderately low
 9,7,10,0.7,moderately high
 11,0,1,0.0,low

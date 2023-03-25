@@ -1,4 +1,5 @@
 from sklearn.model_selection import cross_validate
+from sklearn.pipeline import Pipeline
 import pandas as pd
 from .prep import DataPrep
 
@@ -37,3 +38,16 @@ def make_predictions(fitted_pipeline, submission_name):
 
     # Write results to csv file
     submission.to_csv(f'./submissions/{submission_name}', index=False)
+    
+
+def evaluate_model(estimator: Pipeline, X_train: pd.DataFrame, X_test: pd.DataFrame, y_train: pd.DataFrame, y_test: pd.DataFrame) -> None:
+    # Fit base pipeline to training data
+    estimator.fit(X_train, y_train)
+
+    # Get training Accuracy score
+    training_accuracy = estimator.score(X_train, y_train)
+    print(f"Training Score: {training_accuracy}")
+
+    # Get validation Accuracy score
+    validation_accuracy = estimator.score(X_test, y_test)
+    print(f"Validation Score: {validation_accuracy}")

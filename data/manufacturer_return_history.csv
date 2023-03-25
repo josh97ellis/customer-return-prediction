@@ -1,4 +1,4 @@
-manufacturerID,total_returns,total_orders,return_rate,manufacturer_return_behavior
+manufacturerID,total_returns,total_orders,manufacturer_return_rate,manufacturer_return_behavior
 1,7939,14599,0.5438043701623398,moderately high
 2,611,1192,0.5125838926174496,moderately high
 3,12585,31351,0.4014226021498517,moderately low
