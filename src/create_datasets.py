@@ -1,3 +1,9 @@
+"""
+Functions to create the datasets used in feature engineering
+
+These datasets are saved in ../data/<dataset.csv> 
+"""
+
 import pandas as pd
 
 
@@ -5,7 +11,10 @@ def get_training() -> tuple:
     """
     Read training X and y data
     """
-    df = pd.read_csv('../data/train.csv').drop(columns='id')
+    df = pd.read_csv(
+        r'C:\Users\Josh Ellis\Documents\programming\projects\customer-return-prediction\data\train.csv'
+    ).drop(columns='id')
+    
     X = df.drop(columns='return')
     y = df['return']
     return X, y

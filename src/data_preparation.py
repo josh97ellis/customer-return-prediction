@@ -160,7 +160,7 @@ class DataPrep:
     def _get_customer_return_rate(self, df: pd.DataFrame):
         data = deepcopy(df)
         
-        customer_returns = pd.read_csv('../data/customer_returns.csv', dtype='O')
+        customer_returns = pd.read_csv('C:/Users/Josh Ellis/Documents/programming/projects/customer-return-prediction/data/customer_returns.csv', dtype='O')
         customer_returns.rename(
             columns = {
                 'total_orders': 'customer_order_count',
@@ -180,7 +180,7 @@ class DataPrep:
     def _get_item_return_rate(self, df: pd.DataFrame):
         data = deepcopy(df)
         
-        item_returns = pd.read_csv('../data/item_returns.csv', dtype='O')
+        item_returns = pd.read_csv('C:/Users/Josh Ellis/Documents/programming/projects/customer-return-prediction/data/item_returns.csv', dtype='O')
         item_returns.rename(
             columns = {
                 'total_orders': 'item_order_count',
@@ -200,7 +200,7 @@ class DataPrep:
     def _get_manufacturer_return_rate(self, df: pd.DataFrame):
         data = deepcopy(df)
         
-        manufacturer_returns = pd.read_csv('../data/manufacturer_returns.csv', dtype='O')
+        manufacturer_returns = pd.read_csv('C:/Users/Josh Ellis/Documents/programming/projects/customer-return-prediction/data/manufacturer_returns.csv', dtype='O')
         manufacturer_returns.rename(
             columns = {
                 'total_orders': 'manufacturer_order_count',

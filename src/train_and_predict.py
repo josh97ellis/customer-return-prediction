@@ -4,10 +4,28 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from xgboost import XGBClassifier
 import numpy as np
+import pandas as pd
 
 from create_datasets import get_training
 from data_preparation import DataPrep
-from evaluation import make_predictions
+
+
+def make_predictions(fitted_pipeline, submission_name):
+    # Read kaggle test data from disk
+    X_test = pd.read_csv('C:/Users/Josh Ellis/Documents/programming/projects/customer-return-prediction/data/test.csv')
+    
+    # Prep test data
+    X_test_prepped = X_test.drop(columns='id')
+    X_test_prepped = DataPrep().run(X_test_prepped)
+
+    # Use fitted model pipeline to predict values on test data
+    submission = pd.DataFrame({
+        'id': list(X_test['id']),
+        'return': fitted_pipeline.predict(X_test_prepped)
+    })
+
+    # Write results to csv file
+    submission.to_csv(f'C:/Users/Josh Ellis/Documents/programming/projects/customer-return-prediction/submissions/{submission_name}', index=False)
 
 
 def main():
