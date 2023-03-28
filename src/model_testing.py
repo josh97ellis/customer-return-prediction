@@ -1,7 +1,8 @@
 from sklearn.model_selection import cross_validate
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, accuracy_score, precision_score, recall_score, f1_score
 from sklearn.pipeline import Pipeline
 import pandas as pd
-from .prep import DataPrep
+from prep import DataPrep
 
 
 def model_evaluation_cv(estimator, X, y, cv=5, scoring='accuracy', return_train_score=False):
@@ -40,14 +41,24 @@ def make_predictions(fitted_pipeline, submission_name):
     submission.to_csv(f'./submissions/{submission_name}', index=False)
     
 
-def evaluate_model(estimator: Pipeline, X_train: pd.DataFrame, X_test: pd.DataFrame, y_train: pd.DataFrame, y_test: pd.DataFrame) -> None:
-    # Fit base pipeline to training data
-    estimator.fit(X_train, y_train)
+def evaluate_confusion_matrix(estimator: Pipeline, X_train: pd.DataFrame, X_test: pd.DataFrame, y_train: pd.DataFrame, y_test: pd.DataFrame) -> None:
+    estimator.fit(X_train,  y_train)
+    y_pred_train = estimator.predict(X_train)
+    y_pred_val = estimator.predict(X_test)
 
-    # Get training Accuracy score
-    training_accuracy = estimator.score(X_train, y_train)
-    print(f"Training Score: {training_accuracy}")
+    print(f'Training Accuracy: {round(accuracy_score(y_train, y_pred_train), 4)}')
+    print(f'Test Accuracy: {round(accuracy_score(y_test, y_pred_val), 4)}')
+    print(f'Precision: {round(precision_score(y_test, y_pred_val), 4)}')
+    print(f'Recall: {round(recall_score(y_test, y_pred_val), 4)}')
+    print(f'F1 Score: {round(f1_score(y_test, y_pred_val), 4)}')
 
-    # Get validation Accuracy score
-    validation_accuracy = estimator.score(X_test, y_test)
-    print(f"Validation Score: {validation_accuracy}")
+    print('')
+
+    print('---CONFUSION MATRIX---')
+    cm = confusion_matrix(y_test, y_pred_val, labels=estimator.classes_)
+    cmd = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=estimator.classes_).plot()
+    print(f'True Positives: {cm[1][1]}')
+    print(f'True Negatives: {cm[0][0]}')
+    print(f'False Positives: {cm[0][1]}')
+    print(f'False Negatives: {cm[1][0]}')
+    cmd
