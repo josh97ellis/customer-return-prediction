@@ -5,7 +5,7 @@ def get_training() -> tuple:
     """
     Read training X and y data
     """
-    df = pd.read_csv('data/train.csv').drop(columns='id')
+    df = pd.read_csv('../data/train.csv').drop(columns='id')
     X = df.drop(columns='return')
     y = df['return']
     return X, y
