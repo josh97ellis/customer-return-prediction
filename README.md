@@ -1,2 +1,2 @@
 ### Customer Return Prediction
-Kaggle Cometition #1 for UNO STAT8456
+Kaggle Competition #1 for UNO STAT8456
